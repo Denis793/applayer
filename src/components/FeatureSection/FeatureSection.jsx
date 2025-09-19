@@ -1,4 +1,3 @@
-import { IconBox } from '../IconBox';
 import { FaCalendarAlt, FaMicrophone, FaStethoscope } from 'react-icons/fa';
 import styles from './FeatureSection.module.scss';
 
@@ -31,19 +30,19 @@ const colorMap = {
 
 export function FeatureSection() {
   return (
-    <section id="feature" className={styles.section}>
+    <section className={styles.section} id="feature">
       <div className={styles.container}>
         <div className={styles.header}>
-          <h2 className={styles.title}>Awesome Features</h2>
-          <p className={styles.description}>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, diam nonumy eirmod tempor invidunt ut labore.
+          <h2 className={styles.title}>What Makes Us Stand Out</h2>
+          <p className={styles.subtitle}>
+            Discover a better way to manage your health with features designed to make your life easier.
           </p>
         </div>
 
         <div className={styles.grid}>
           {features.map((feature, idx) => (
             <div key={idx} className={styles.card}>
-              <IconBox icon={feature.icon} colorClass={colorMap[feature.color]} />
+              <div className={`${styles.iconWrapper} ${colorMap[feature.color]}`}>{feature.icon}</div>
               <h4 className={styles.cardTitle}>{feature.title}</h4>
               <p className={styles.cardDescription}>{feature.description}</p>
             </div>

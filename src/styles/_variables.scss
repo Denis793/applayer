@@ -8,7 +8,7 @@ $color-gray-medium: #f3f4f6;
 $color-gray-border: #e5e7eb;
 $color-transparent: rgba(0, 0, 0, 0);
 $color-white-transparent: rgba(255, 255, 255, 0.9);
-$color-shadow-light: rgba(0, 0, 0, 0.1);
+$color-shadow-light: rgba(70, 70, 70, 0.034);
 $color-shadow-dark: rgba(0, 0, 0, 0.6);
 // Header
 $header-bg: #0000004b;
@@ -45,15 +45,15 @@ $spacing-10: 2.5rem;
 $spacing-12: 3rem;
 
 // Shadows
-$shadow-sm: 0 1px 2px 0 $color-shadow-light;
+$shadow-sm: 0 1px 2px $color-shadow-light;
 $shadow-md: 0 4px 6px -1px $color-shadow-light, 0 2px 4px -1px $color-shadow-dark;
 $shadow-lg: 0 10px 15px -3px $color-shadow-dark;
 $shadow-mobile-link: 0 0px 6px $color-shadow-dark;
 
 // Border Radius
-$radius-sm: 4px;
-$radius-md: 6px;
-$radius-lg: 9999px;
+$radius-sm: 1rem;
+$radius-md: 2rem;
+$radius-lg: 3rem;
 
 // Transitions
 $transition-base: all 0.3s ease;

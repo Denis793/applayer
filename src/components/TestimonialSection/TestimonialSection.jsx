@@ -23,7 +23,7 @@ const testimonials = [
 
 export function TestimonialSection() {
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="testimonial">
       <div className={styles.container}>
         <div className={styles.header}>
           <h2 className={styles.title}>What Our Users Say</h2>

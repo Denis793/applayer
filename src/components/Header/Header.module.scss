@@ -3,7 +3,8 @@
 .header {
   width: 100%;
   top: 0;
-  z-index: $z-header;
+  padding: 0 $spacing-10;
+  z-index: $z-index-modal;
   transition: $transition-base;
 }
 
@@ -17,12 +18,6 @@
   box-shadow: $shadow-md;
 }
 
-.container {
-  max-width: $container-max-width;
-  margin: 0 auto;
-  padding: $spacing-4;
-}
-
 .inner {
   display: flex;
   align-items: center;
@@ -31,7 +26,7 @@
 }
 
 .logo {
-  height: 2.5rem;
+  height: 2rem;
 }
 
 .nav {
@@ -56,17 +51,38 @@
 .burger {
   display: flex;
   flex-direction: column;
-  gap: 3px;
+  justify-content: center;
+  gap: 6px;
+  width: 2rem;
+  height: 2rem;
   background: none;
   border: none;
   cursor: pointer;
   z-index: $z-index-modal;
+  padding: 0;
 
   span {
-    width: 1.5rem;
+    display: block;
     height: 2px;
+    width: 100%;
     background-color: $color-text-light;
-    transition: $transition-base;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    transform-origin: center;
+  }
+
+  &.open {
+    span:nth-child(1) {
+      transform: rotate(45deg) translate(8px, 5px);
+    }
+
+    span:nth-child(2) {
+      opacity: 0;
+    }
+
+    span:nth-child(3) {
+      transform: rotate(-45deg) translate(6px, -4px);
+    }
   }
 
   @media (min-width: $breakpoint-lg) {
@@ -75,20 +91,20 @@
 }
 
 .mobileMenu {
+  position: absolute;
+  top: 100%;
+  left: 10%;
+  right: 10%;
   display: flex;
   flex-direction: column;
   text-align: center;
-  position: absolute;
-  overflow: hidden;
-  top: 100%;
-  left: 15%;
-  right: 15%;
-  border-radius: 2rem;
   max-height: 0;
+  overflow: hidden;
   background-color: $nav-mobile-bg;
+  border-radius: 2rem;
   transition: max-height 0.3s ease;
   box-shadow: $shadow-md;
-  z-index: $z-index-mobileMenu;
+  z-index: $z-index-modal;
 
   a {
     padding: 1rem;
@@ -106,17 +122,17 @@
   @media (min-width: $breakpoint-lg) {
     display: none;
   }
-}
 
-.open {
-  max-height: 500px;
+  &.open {
+    max-height: 500px;
+  }
 }
 
 .overlay {
   position: fixed;
   inset: 0;
-  z-index: $z-index-overlay;
   background-color: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(6px);
+  z-index: $z-index-overlay;
   transition: opacity 0.3s ease;
 }

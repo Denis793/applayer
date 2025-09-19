@@ -1,28 +1,30 @@
 @use '@/styles/variables' as *;
 
 .section {
-  padding: 5rem 0;
+  padding: 6rem 1rem;
+  background-color: $color-text-light;
 }
 
 .container {
-  max-width: 1140px;
+  max-width: $container-max-width;
   margin: 0 auto;
-  padding: 0 1rem;
 }
 
 .header {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 3.5rem;
 }
 
 .title {
-  font-size: $font-size-2xl;
+  font-size: $font-size-3xl;
   font-family: $font-heading;
+  font-weight: $font-weight-bold;
   color: $color-heading;
   margin-bottom: 1rem;
 }
 
 .subtitle {
+  font-size: $font-size-base;
   color: $color-body;
   max-width: 36rem;
   margin: 0 auto;
@@ -36,23 +38,46 @@
 .faqItem {
   border-bottom: 1px solid $color-gray-border;
   padding: 1rem 0;
+  transition: background-color 0.3s ease;
+  overflow: hidden;
 }
 
 .question {
   width: 100%;
-  text-align: left;
-  font-size: $font-size-base;
-  font-weight: $font-weight-medium;
-  color: $color-heading;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background: none;
   border: none;
+  color: $color-heading;
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
   cursor: pointer;
-  outline: none;
-  padding: 0;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $color-primary;
+  }
+
+  .icon {
+    font-size: 0.9rem;
+    transition: transform 0.3s ease;
+  }
+
+  .faqItem.open & .icon {
+    transform: rotate(180deg);
+  }
+}
+
+.answerWrapper {
+  overflow: hidden;
+  transition: max-height 0.4s ease;
 }
 
 .answer {
-  margin-top: 0.5rem;
-  font-size: $font-size-sm;
+  padding-top: 0.75rem;
+  font-size: $font-size-base;
   color: $color-body;
+  line-height: 1.6;
 }

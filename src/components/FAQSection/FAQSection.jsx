@@ -1,4 +1,6 @@
+// src/components/FAQSection.jsx
 import { useState } from 'react';
+import { FaChevronDown } from 'react-icons/fa';
 import styles from './FAQSection.module.scss';
 
 const faqs = [
@@ -14,26 +16,41 @@ const faqs = [
     question: 'Is my data secure?',
     answer: 'We use industry-standard encryption to keep your data safe and private.',
   },
+  {
+    question: 'Do you offer telemedicine services?',
+    answer: 'Yes! You can consult with a doctor online using video calls.',
+  },
+  {
+    question: 'Are my medical records accessible anytime?',
+    answer: 'Absolutely. Your digital health records are always available securely.',
+  },
 ];
 
 export function FAQSection() {
   const [openIndex, setOpenIndex] = useState(null);
 
+  const toggleFAQ = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
   return (
-    <section id="faq" className={styles.section}>
+    <section className={styles.section} id="faq">
       <div className={styles.container}>
         <div className={styles.header}>
           <h2 className={styles.title}>Frequently Asked Questions</h2>
-          <p className={styles.subtitle}>Have a question? We’re here to help.</p>
+          <p className={styles.subtitle}>Still curious? Here’s what others often ask.</p>
         </div>
 
         <div className={styles.faqList}>
           {faqs.map((faq, idx) => (
-            <div key={idx} className={styles.faqItem}>
-              <button className={styles.question} onClick={() => setOpenIndex(openIndex === idx ? null : idx)}>
-                {faq.question}
+            <div key={idx} className={`${styles.faqItem} ${openIndex === idx ? styles.open : ''}`}>
+              <button className={styles.question} onClick={() => toggleFAQ(idx)}>
+                <span>{faq.question}</span>
+                <FaChevronDown className={styles.icon} />
               </button>
-              {openIndex === idx && <p className={styles.answer}>{faq.answer}</p>}
+              <div className={styles.answerWrapper} style={{ maxHeight: openIndex === idx ? '200px' : '0px' }}>
+                <p className={styles.answer}>{faq.answer}</p>
+              </div>
             </div>
           ))}
         </div>
