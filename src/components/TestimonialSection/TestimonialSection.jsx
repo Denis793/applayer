@@ -23,26 +23,28 @@ const testimonials = [
 
 export function TestimonialSection() {
   return (
-    <section className={styles.section} id="testimonial">
-      <div className={styles.container}>
-        <div className={styles.header}>
-          <h2 className={styles.title}>What Our Users Say</h2>
-          <p className={styles.subtitle}>Real feedback from people who use our app every day.</p>
-        </div>
+    <>
+      <section className={styles.section} id="testimonial">
+        <div className="container">
+          <div className={styles.header}>
+            <h2>What Our Users Say</h2>
+            <h3>Real feedback from people who use our app every day.</h3>
+          </div>
 
-        <div className={styles.grid}>
-          {testimonials.map((t, idx) => (
-            <div key={idx} className={styles.card}>
-              <img src={t.avatar} alt={t.name} className={styles.avatar} />
-              <p className={styles.text}>"{t.text}"</p>
-              <div className={styles.author}>
-                <span className={styles.name}>{t.name}</span>
-                <span className={styles.role}>{t.role}</span>
+          <div className={styles.grid}>
+            {testimonials.map((t, idx) => (
+              <div key={idx} className="card">
+                <img src={t.avatar} alt={t.name} className={styles.avatar} />
+                <p className={styles.text}>"{t.text}"</p>
+                <div className={styles.author}>
+                  <span className={styles.name}>{t.name}</span>
+                  <span className={styles.role}>{t.role}</span>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }

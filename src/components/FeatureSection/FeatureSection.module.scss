@@ -15,39 +15,10 @@
   margin-bottom: 4rem;
 }
 
-.title {
-  font-size: $font-size-3xl;
-  font-family: $font-heading;
-  font-weight: $font-weight-bold;
-  color: $color-heading;
-  margin-bottom: 1rem;
-}
-
-.subtitle {
-  font-size: $font-size-base;
-  color: $color-body;
-  max-width: 36rem;
-  margin: 0 auto;
-}
-
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 2rem;
-}
-
-.card {
-  background-color: $color-text-light;
-  padding: 2rem;
-  border-radius: 1.25rem;
-  text-align: center;
-  box-shadow: $shadow-md;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-  &:hover {
-    transform: translateY(-6px);
-    box-shadow: $shadow-lg;
-  }
 }
 
 .iconWrapper {

@@ -34,27 +34,29 @@ export function FAQSection() {
   };
 
   return (
-    <section className={styles.section} id="faq">
-      <div className={styles.container}>
-        <div className={styles.header}>
-          <h2 className={styles.title}>Frequently Asked Questions</h2>
-          <p className={styles.subtitle}>Still curious? Here’s what others often ask.</p>
-        </div>
+    <>
+      <section className={styles.section} id="faq">
+        <div className="container">
+          <div className={styles.header}>
+            <h2>Frequently Asked Questions</h2>
+            <h3 className={styles.subtitle}>Still curious? Here’s what others often ask.</h3>
+          </div>
 
-        <div className={styles.faqList}>
-          {faqs.map((faq, idx) => (
-            <div key={idx} className={`${styles.faqItem} ${openIndex === idx ? styles.open : ''}`}>
-              <button className={styles.question} onClick={() => toggleFAQ(idx)}>
-                <span>{faq.question}</span>
-                <FaChevronDown className={styles.icon} />
-              </button>
-              <div className={styles.answerWrapper} style={{ maxHeight: openIndex === idx ? '200px' : '0px' }}>
-                <p className={styles.answer}>{faq.answer}</p>
+          <div className={styles.faqList}>
+            {faqs.map((faq, idx) => (
+              <div key={idx} className={`${styles.faqItem} ${openIndex === idx ? styles.open : ''}`}>
+                <button className={styles.question} onClick={() => toggleFAQ(idx)}>
+                  <span>{faq.question}</span>
+                  <FaChevronDown className={styles.icon} />
+                </button>
+                <div className={styles.answerWrapper} style={{ maxHeight: openIndex === idx ? '200px' : '0px' }}>
+                  <p className={styles.answer}>{faq.answer}</p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }

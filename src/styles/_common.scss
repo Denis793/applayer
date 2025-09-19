@@ -42,7 +42,46 @@ li {
   padding: 0 1rem;
 }
 
+h1 {
+  font-size: $font-size-2xl;
+  font-weight: $font-weight-bold;
+  line-height: 1.2;
+  margin-bottom: $spacing-6;
+  color: $color-h1;
+  @media (min-width: $breakpoint-lg) {
+    font-size: $font-size-4xl;
+  }
+}
+
+h2 {
+  font-size: $font-size-2xl;
+  font-family: $font-heading;
+  color: $color-h2;
+  margin-bottom: $spacing-4;
+}
+
+h3 {
+  font-size: $font-size-base;
+  color: $color-h3;
+  margin-bottom: $spacing-6;
+  font-weight: normal;
+}
+
 p {
   font-size: $font-size-base;
   color: $color-body;
+}
+
+.card {
+  background-color: $color-text-light;
+  padding: 2rem;
+  border-radius: 1.25rem;
+  text-align: center;
+  box-shadow: $shadow-md;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: $shadow-lg;
+  }
 }

@@ -1,24 +1,12 @@
 // src/components/AboutSection.module.scss
 @use '@/styles/variables' as *;
 
-.section {
-  padding: 5rem 0;
+.aboutWrapper {
   background-color: $color-gray-light;
 }
-
-.container {
-  max-width: $container-max-width;
-  margin: 0 auto;
-  padding: 0 $spacing-4;
+.aboutSection {
   display: flex;
-  flex-direction: column;
-  gap: 3rem;
   align-items: center;
-
-  @media (min-width: $breakpoint-lg) {
-    flex-direction: row;
-    justify-content: space-between;
-  }
 }
 
 .imageBlock {
@@ -40,13 +28,6 @@
   @media (min-width: $breakpoint-lg) {
     text-align: left;
     padding-left: $spacing-8;
-  }
-
-  .title {
-    font-size: $font-size-2xl;
-    font-family: $font-heading;
-    color: $color-heading;
-    margin-bottom: 1rem;
   }
 
   .description {
