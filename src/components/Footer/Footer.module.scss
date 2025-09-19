@@ -1,0 +1,115 @@
+@use '@/styles/variables' as *;
+
+.footer {
+  background-color: $color-gray-medium;
+  padding: 4rem 0 2rem;
+  color: $color-body;
+  font-size: $font-size-sm;
+}
+
+.container {
+  max-width: $container-max-width;
+  margin: 0 auto;
+  padding: 0 $spacing-4;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+
+  @media (min-width: $breakpoint-lg) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.brand {
+  flex: 1;
+
+  .logo {
+    height: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .description {
+    max-width: 320px;
+    color: $color-body;
+  }
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  flex: 2;
+  justify-content: space-between;
+}
+
+.column {
+  min-width: 160px;
+
+  .columnTitle {
+    font-weight: $font-weight-bold;
+    color: $color-heading;
+    margin-bottom: 1rem;
+    font-size: $font-size-base;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      margin-bottom: 0.5rem;
+
+      a {
+        color: $color-body;
+        text-decoration: none;
+        transition: color 0.3s;
+
+        &:hover {
+          color: $color-primary;
+        }
+      }
+    }
+  }
+}
+
+.bottom {
+  border-top: 1px solid $color-gray-border;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1.5rem;
+  gap: 1rem;
+
+  @media (min-width: $breakpoint-md) {
+    flex-direction: row;
+  }
+}
+
+.copy {
+  font-size: $font-size-sm;
+  color: $color-body;
+}
+
+.socials {
+  display: flex;
+  gap: 1rem;
+
+  a {
+    color: $color-body;
+    font-size: 1.25rem;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+}

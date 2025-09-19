@@ -1,0 +1,122 @@
+@use '@/styles/variables' as *;
+
+.header {
+  width: 100%;
+  top: 0;
+  z-index: $z-header;
+  transition: $transition-base;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.sticky {
+  position: fixed;
+  background-color: $header-bg;
+  box-shadow: $shadow-md;
+}
+
+.container {
+  max-width: $container-max-width;
+  margin: 0 auto;
+  padding: $spacing-4;
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 5rem;
+}
+
+.logo {
+  height: 2.5rem;
+}
+
+.nav {
+  display: none;
+
+  @media (min-width: $breakpoint-lg) {
+    display: flex;
+    gap: $spacing-6;
+
+    a {
+      color: $color-text-light;
+      text-decoration: none;
+      transition: color 0.3s;
+
+      &:hover {
+        color: $color-primary;
+      }
+    }
+  }
+}
+
+.burger {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: $z-index-modal;
+
+  span {
+    width: 1.5rem;
+    height: 2px;
+    background-color: $color-text-light;
+    transition: $transition-base;
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    display: none;
+  }
+}
+
+.mobileMenu {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  position: absolute;
+  overflow: hidden;
+  top: 100%;
+  left: 25%;
+  right: 25%;
+  border-radius: 2rem;
+  max-height: 0;
+  background-color: $nav-mobile-bg;
+  transition: max-height 0.3s ease;
+  box-shadow: $shadow-md;
+  z-index: $z-index-mobileMenu;
+
+  a {
+    padding: 1rem;
+    color: $color-text-light;
+    font-size: $font-size-2xl;
+    text-decoration: none;
+    text-shadow: $shadow-mobile-link;
+    transition: background 0.3s;
+
+    &:hover {
+      background-color: $color-mobile-hover-link;
+    }
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    display: none;
+  }
+}
+
+.open {
+  max-height: 500px;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: $z-index-overlay;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(6px);
+  transition: opacity 0.3s ease;
+}

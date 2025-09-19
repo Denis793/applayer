@@ -1,0 +1,81 @@
+@use '@/styles/variables' as *;
+
+.section {
+  padding: 5rem 0;
+  background-color: $color-gray-light;
+}
+
+.container {
+  max-width: $container-max-width;
+  margin: 0 auto;
+  padding: 0 $spacing-4;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.title {
+  font-size: $font-size-2xl;
+  font-family: $font-heading;
+  color: $color-heading;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  color: $color-body;
+  max-width: 36rem;
+  margin: 0 auto;
+  font-size: $font-size-base;
+}
+
+.grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.card {
+  background-color: $color-text-light;
+  border-radius: $radius-sm;
+  padding: 2rem;
+  box-shadow: $shadow-md;
+  text-align: center;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+  }
+}
+
+.avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 9999px;
+  object-fit: cover;
+  margin: 0 auto 1rem;
+}
+
+.text {
+  font-size: $font-size-base;
+  color: $color-body;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.author {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.name {
+  font-weight: $font-weight-semibold;
+  color: $color-heading;
+}
+
+.role {
+  font-size: $font-size-sm;
+  color: $color-body;
+}
