@@ -1,8 +1,8 @@
 @use '@/styles/variables' as *;
 
-.section {
-  padding: 5rem 0;
-  background-color: $color-gray-light;
+.testimonialSection {
+  padding: $spacing-12 0;
+  background-color: $bg-section;
 }
 
 .container {
@@ -13,12 +13,12 @@
 
 .header {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: $spacing-8;
 }
 
 .grid {
   display: grid;
-  gap: 2rem;
+  gap: $spacing-8;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
@@ -27,28 +27,28 @@
   height: 6rem;
   border-radius: 50%;
   object-fit: cover;
-  margin: 0 auto 1rem;
+  margin: 0 auto $spacing-4;
 }
 
 .text {
   font-size: $font-size-base;
-  color: $color-body;
-  margin-bottom: 1rem;
+  color: $text-color-default;
+  margin-bottom: $spacing-4;
   font-style: italic;
 }
 
 .author {
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
+  gap: $spacing-1;
 }
 
 .name {
   font-weight: $font-weight-semibold;
-  color: $color-heading;
+  color: $text-color-heading;
 }
 
 .role {
   font-size: $font-size-sm;
-  color: $color-body;
+  color: $text-color-default;
 }

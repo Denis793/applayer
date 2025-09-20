@@ -1,9 +1,9 @@
 @use '@/styles/variables' as *;
 
 .footer {
-  background-color: $color-gray-medium;
-  padding: 4rem 0 2rem;
-  color: $color-body;
+  background-color: $footer-bg;
+  padding: $spacing-12 0 $spacing-8;
+  color: $text-color-default;
   font-size: $font-size-sm;
 }
 
@@ -13,7 +13,7 @@
   padding: 0 $spacing-4;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: $spacing-8;
 }
 
 .top {
@@ -32,14 +32,14 @@
 
   .logo {
     height: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: $spacing-4;
   }
 }
 
 .links {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: $spacing-8;
   flex: 2;
   justify-content: space-between;
 }
@@ -49,8 +49,8 @@
 
   .columnTitle {
     font-weight: $font-weight-bold;
-    color: $color-heading;
-    margin-bottom: 1rem;
+    color: $text-color-heading;
+    margin-bottom: $spacing-4;
     font-size: $font-size-base;
   }
 
@@ -60,15 +60,15 @@
     margin: 0;
 
     li {
-      margin-bottom: 0.5rem;
+      margin-bottom: $spacing-2;
 
       a {
-        color: $color-body;
+        color: $text-color-default;
         text-decoration: none;
-        transition: color 0.3s;
+        transition: $transition-base;
 
         &:hover {
-          color: $color-primary;
+          color: $primary-color;
         }
       }
     }
@@ -76,13 +76,13 @@
 }
 
 .bottom {
-  border-top: 1px solid $color-gray-border;
+  border-top: 1px solid $border-color-default;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding-top: 1.5rem;
-  gap: 1rem;
+  padding-top: $spacing-6;
+  gap: $spacing-4;
 
   @media (min-width: $breakpoint-md) {
     flex-direction: row;
@@ -91,20 +91,20 @@
 
 .copy {
   font-size: $font-size-sm;
-  color: $color-body;
+  color: $text-color-default;
 }
 
 .socials {
   display: flex;
-  gap: 1rem;
+  gap: $spacing-4;
 
   a {
-    color: $color-body;
-    font-size: 1.25rem;
-    transition: color 0.3s;
+    color: $text-color-default;
+    font-size: $font-size-lg;
+    transition: $transition-base;
 
     &:hover {
-      color: $color-primary;
+      color: $primary-color;
     }
   }
 }

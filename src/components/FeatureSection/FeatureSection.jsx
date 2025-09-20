@@ -31,7 +31,7 @@ const colorMap = {
 export function FeatureSection() {
   return (
     <>
-      <section className={styles.section} id="feature">
+      <section className={styles.section} id="feature" data-aos="fade-up">
         <div className="container">
           <div className={styles.header}>
             <h2>What Makes Us Stand Out</h2>

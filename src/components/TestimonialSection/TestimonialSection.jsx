@@ -24,7 +24,7 @@ const testimonials = [
 export function TestimonialSection() {
   return (
     <>
-      <section className={styles.section} id="testimonial">
+      <section className={styles.testimonialSection} id="testimonial" data-aos="fade-up">
         <div className="container">
           <div className={styles.header}>
             <h2>What Our Users Say</h2>

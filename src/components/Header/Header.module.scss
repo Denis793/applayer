@@ -14,7 +14,7 @@
 
 .sticky {
   position: fixed;
-  background-color: $header-bg;
+  background-color: $bg-header;
   box-shadow: $shadow-md;
 }
 
@@ -37,12 +37,12 @@
     gap: $spacing-6;
 
     a {
-      color: $color-text-light;
+      color: $text-color-contrast;
       text-decoration: none;
       transition: color 0.3s;
 
       &:hover {
-        color: $color-primary;
+        color: $text-color-heading;
       }
     }
   }
@@ -62,10 +62,9 @@
   padding: 0;
 
   span {
-    display: block;
     height: 2px;
     width: 100%;
-    background-color: $color-text-light;
+    background-color: $text-color-contrast;
     border-radius: 2px;
     transition: all 0.3s ease;
     transform-origin: center;
@@ -73,15 +72,13 @@
 
   &.open {
     span:nth-child(1) {
-      transform: rotate(45deg) translate(8px, 5px);
+      transform: rotate(45deg) translate(5px, 5px);
     }
-
     span:nth-child(2) {
       opacity: 0;
     }
-
     span:nth-child(3) {
-      transform: rotate(-45deg) translate(6px, -4px);
+      transform: rotate(-45deg) translate(5px, -5px);
     }
   }
 
@@ -91,48 +88,40 @@
 }
 
 .mobileMenu {
-  position: absolute;
-  top: 100%;
-  left: 10%;
-  right: 10%;
+  position: fixed;
+  inset: 0;
   display: flex;
   flex-direction: column;
-  text-align: center;
-  max-height: 0;
-  overflow: hidden;
-  background-color: $nav-mobile-bg;
-  border-radius: 2rem;
-  transition: max-height 0.3s ease;
-  box-shadow: $shadow-md;
-  z-index: $z-index-modal;
+  justify-content: center;
+  align-items: center;
+  background-color: $bg-mobile-nav;
+  backdrop-filter: blur(12px);
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.95);
+  transition: all 0.4s ease;
+  z-index: $z-index-mobileMenu;
 
   a {
-    padding: 1rem;
-    color: $color-text-light;
-    font-size: $font-size-2xl;
+    margin: 1rem 0;
+    color: $text-color-contrast;
+    font-size: 1.75rem;
+    font-weight: $font-weight-semibold;
     text-decoration: none;
-    text-shadow: $shadow-mobile-link;
-    transition: background 0.3s;
+    transition: color 0.3s;
 
     &:hover {
-      background-color: $color-mobile-hover-link;
+      color: $primary-color;
     }
+  }
+
+  &.open {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
   }
 
   @media (min-width: $breakpoint-lg) {
     display: none;
   }
-
-  &.open {
-    max-height: 500px;
-  }
-}
-
-.overlay {
-  position: fixed;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(6px);
-  z-index: $z-index-overlay;
-  transition: opacity 0.3s ease;
 }

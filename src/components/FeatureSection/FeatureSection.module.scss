@@ -1,8 +1,8 @@
 @use '@/styles/variables' as *;
 
 .section {
-  padding: 6rem 1rem;
-  background-color: $color-gray-light;
+  padding: $spacing-12 $spacing-4;
+  background-color: $bg-section;
 }
 
 .container {
@@ -12,48 +12,49 @@
 
 .header {
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: $spacing-10;
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 2rem;
+  gap: $spacing-8;
 }
 
 .iconWrapper {
   width: 4rem;
   height: 4rem;
-  margin: 0 auto 1.5rem;
+  margin: 0 auto $spacing-6;
   border-radius: $radius-md;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.75rem;
-  color: $color-text-light;
+  color: $text-color-contrast;
   box-shadow: $shadow-md;
 }
 
 .cardTitle {
   font-size: $font-size-xl;
   font-weight: $font-weight-semibold;
-  color: $color-heading;
-  margin-bottom: 0.5rem;
+  color: $text-color-heading;
+  margin-bottom: $spacing-2;
 }
 
 .cardDescription {
   font-size: $font-size-base;
-  color: $color-body;
+  color: $text-color-default;
   line-height: 1.6;
 }
 
-// Colors
 .blue {
   background-color: $feature-blue;
 }
+
 .green {
   background-color: $feature-green;
 }
+
 .pink {
   background-color: $feature-pink;
 }

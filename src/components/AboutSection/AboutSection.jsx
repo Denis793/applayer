@@ -4,7 +4,7 @@ import aboutImage from '@/img/department/department.png';
 export function AboutSection() {
   return (
     <>
-      <section className={styles.aboutWrapper} id="about">
+      <section className={styles.aboutWrapper} id="about" data-aos="fade-up">
         <div className="container">
           <div className={styles.aboutSection}>
             <div className={styles.imageBlock}>

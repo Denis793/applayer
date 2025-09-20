@@ -1,52 +1,82 @@
 @use '@/styles/variables' as *;
 
 .section {
-  padding: 6rem 1rem;
-  background-color: $color-text-light;
+  padding: $spacing-12 $spacing-4;
+  background-color: $bg-card;
 }
 
 .container {
   max-width: $container-max-width;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-12;
+
+  @media (min-width: $breakpoint-lg) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.textBlock {
+  flex: 1;
 }
 
 .header {
-  text-align: center;
-  margin-bottom: 3.5rem;
+  text-align: left;
+  margin-bottom: $spacing-6;
+
+  h2 {
+    font-size: $font-size-2xl;
+    font-weight: $font-weight-bold;
+    color: $text-color-heading;
+    margin-bottom: $spacing-3;
+  }
+
+  .subtitle {
+    color: $text-color-default;
+    font-size: $font-size-base;
+    max-width: 40rem;
+  }
 }
 
 .faqList {
-  max-width: 48rem;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-3;
+  margin-top: $spacing-6;
 }
 
 .faqItem {
-  border-bottom: 1px solid $color-gray-border;
-  padding: 1rem 0;
-  transition: background-color 0.3s ease;
+  background-color: $bg-card;
+  box-shadow: $shadow-md;
+  border-radius: $radius-sm;
   overflow: hidden;
+  transition: all 0.3s ease;
 }
 
 .question {
   width: 100%;
+  padding: $spacing-4;
+  background: none;
+  border: none;
+  color: $text-color-heading;
+  font-size: $font-size-base;
+  font-weight: $font-weight-semibold;
+  text-align: left;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: none;
-  border: none;
-  color: $color-heading;
-  font-size: $font-size-lg;
-  font-weight: $font-weight-semibold;
   cursor: pointer;
-  padding: 0.5rem 0;
   transition: color 0.3s ease;
 
   &:hover {
-    color: $color-primary;
+    color: $primary-color;
   }
 
   .icon {
-    font-size: 0.9rem;
+    font-size: 1rem;
     transition: transform 0.3s ease;
   }
 
@@ -61,8 +91,19 @@
 }
 
 .answer {
-  padding-top: 0.75rem;
+  padding: 0 $spacing-4 $spacing-4;
   font-size: $font-size-base;
-  color: $color-body;
+  color: $text-color-default;
   line-height: 1.6;
+}
+
+.imageBlock {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+
+  .image {
+    max-width: 500px;
+    width: 100%;
+  }
 }

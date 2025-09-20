@@ -1,24 +1,46 @@
-// Colors
-$color-primary: #487cff;
-$color-heading: #000000;
-$color-h1: #fff;
-$color-h2: #000;
-$color-h3: #4b4b4b;
-$color-body: #60698d;
-$color-text-light: #ffffff;
-$color-gray-light: #f9fafb;
-$color-gray-medium: #f3f4f6;
-$color-gray-border: #e5e7eb;
-$color-transparent: rgba(0, 0, 0, 0);
-$color-white-transparent: rgba(255, 255, 255, 0.9);
-$color-shadow-light: rgba(70, 70, 70, 0.034);
-$color-shadow-dark: rgba(0, 0, 0, 0.6);
-// Header
-$header-bg: #0000004b;
-$nav-mobile-bg: #0000005e;
-$color-mobile-hover-link: #0000004d;
+$primary-color: #3b82f6;
+$primary-color-hover: #2563eb;
 
-// Fonts
+$color-body: #ccc;
+
+$text-color-default: #4b5563;
+$text-color-heading: #111827;
+$text-color-subheading: #1f2937;
+$text-color-contrast: #fff;
+$text-color-link: #1280c9;
+
+$color-h1: #000;
+$color-h2: #202020;
+$color-h3: #303030;
+$color-h4: #414141;
+$color-h5: #000;
+$color-description: #ccc;
+
+$bg-page: #ffffff;
+$bg-section: #e0f3ff;
+$bg-card: #fff;
+$bg-header: rgba(0, 0, 0, 0.3);
+$bg-mobile-nav: rgba(0, 0, 0, 0.37);
+$bg-hover-mobile-link: rgba(0, 0, 0, 0.3);
+
+$border-color-default: #7dd3fc;
+
+$accent-color-blue: #60a5fa;
+$accent-color-green: #34d399;
+$accent-color-pink: #f472b6;
+
+$overlay-dark: rgba(0, 0, 0, 0.3);
+$overlay-white: rgba(255, 255, 255, 0.95);
+
+$footer-bg: #ffffff;
+
+$shadow-color-light: rgba(101, 148, 235, 0.12);
+$shadow-color-dark: rgba(0, 0, 0, 0.25);
+$shadow-sm: 0 1px 2px $shadow-color-light;
+$shadow-md: 0 4px 6px -1px $shadow-color-light, 0 2px 4px -1px $shadow-color-dark;
+$shadow-lg: 0 10px 15px -3px $shadow-color-dark;
+$shadow-mobile-link: 0 0px 6px $shadow-color-dark;
+
 $font-heading: 'Fira Sans', sans-serif;
 $font-body: 'Heebo', sans-serif;
 $font-size-xs: 0.75rem;
@@ -30,13 +52,11 @@ $font-size-2xl: 2rem;
 $font-size-3xl: 3rem;
 $font-size-4xl: 4rem;
 
-// Font weights
 $font-weight-regular: 400;
 $font-weight-medium: 500;
 $font-weight-semibold: 600;
 $font-weight-bold: 700;
 
-// Spacing
 $spacing-1: 0.25rem;
 $spacing-2: 0.5rem;
 $spacing-3: 0.75rem;
@@ -47,41 +67,28 @@ $spacing-8: 2rem;
 $spacing-10: 2.5rem;
 $spacing-12: 3rem;
 
-// Shadows
-$shadow-sm: 0 1px 2px $color-shadow-light;
-$shadow-md: 0 4px 6px -1px $color-shadow-light, 0 2px 4px -1px $color-shadow-dark;
-$shadow-lg: 0 10px 15px -3px $color-shadow-dark;
-$shadow-mobile-link: 0 0px 6px $color-shadow-dark;
-
-// Border Radius
 $radius-sm: 1rem;
 $radius-md: 2rem;
 $radius-lg: 3rem;
 
-// Transitions
 $transition-base: all 0.3s ease;
 $transition-fast: all 0.2s ease-in-out;
 
-// Layout
 $container-max-width: 1140px;
 
-// Breakpoints
 $breakpoint-sm: 640px;
 $breakpoint-md: 768px;
 $breakpoint-lg: 1024px;
 $breakpoint-xl: 1280px;
 $breakpoint-2xl: 1536px;
 
-// Accent colors for feature icons
 $feature-blue: #3b82f6;
 $feature-green: #10b981;
 $feature-pink: #ec4899;
 
-// Z-index
 $z-index-behind: -1;
 $z-index-base: 1;
-$z-index-overlay: 10;
+$z-index-overlay: 900;
 $z-index-modal: 1000;
 $z-header: 50;
-$z-index-overlay: 900;
 $z-index-mobileMenu: 1000;

@@ -2,6 +2,7 @@
 
 .heroWrapper {
   background: url('@/img/hero/hero-bg.svg') no-repeat top / cover fixed;
+  background-color: $bg-card;
 }
 
 .heroSection {
@@ -10,9 +11,8 @@
   flex-direction: column;
   justify-content: center;
   height: 100vh;
-  padding: 6rem 0rem;
-  color: $color-text-light;
-
+  padding: 6rem 0;
+  color: $text-color-contrast;
   z-index: 0;
 
   @media (min-width: $breakpoint-lg) {
@@ -40,15 +40,15 @@
 .description {
   font-size: $font-size-base;
   margin-bottom: 2rem;
-  color: $color-white-transparent;
+  color: $color-description;
 }
 
 .ctaButton {
   display: inline-block;
   padding: 0.75rem 1.5rem;
   font-weight: $font-weight-semibold;
-  background-color: $color-text-light;
-  color: $color-primary;
+  background-color: $text-color-contrast;
+  color: $primary-color;
   border-radius: $radius-lg;
   box-shadow: $shadow-md;
   transition: $transition-base;
@@ -61,6 +61,7 @@
 .heroImg {
   height: 20rem;
   margin: 2rem;
+
   @media (min-width: $breakpoint-lg) {
     height: 34rem;
   }
