@@ -11,7 +11,7 @@ const logos = [logo1, logo2, logo3, logo4, logo5];
 export function ClientLogoSection() {
   return (
     <>
-      <section className={styles.clientLogoSection} id="explore" data-aos="fade-up">
+      <section className={styles.clientLogoSection} id="client" data-aos="fade-up">
         <div className={styles.sliderWrapper}>
           <div className={styles.sliderTrack}>
             {[...logos, ...logos].map((logo, index) => (

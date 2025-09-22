@@ -5,7 +5,7 @@ import styles from './Hero.module.scss';
 export function Hero() {
   return (
     <>
-      <section className={styles.heroWrapper} id="home" data-aos="fade-up">
+      <section className={styles.heroWrapper} id="hero" data-aos="fade-up">
         <div className="container">
           <div className={styles.heroSection}>
             <div className={styles.textBlock}>
