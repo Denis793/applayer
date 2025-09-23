@@ -3,9 +3,10 @@
 .heroWrapper {
   background-image: url(../../img/hero/hero-bg.svg);
   background-repeat: no-repeat;
-  background-size: cover;
-
-  position: relative;
+  background-size: auto;
+  @media (min-width: $breakpoint-lg) {
+    background-size: cover;
+  }
 }
 
 .heroSection {
@@ -64,7 +65,8 @@
 }
 
 .heroImg {
-  width: 100%;
+  width: 70%;
   max-width: 460px;
   height: auto;
+  padding-top: 2rem;
 }
