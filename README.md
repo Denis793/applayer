@@ -17,7 +17,7 @@ A modern, responsive **landing page** for a health-focused application, built wi
 ## 🖼️ Screenshot
 
 <div align="center">
-  <img src="public/img/screenshot.png" alt="App Screenshot" width="100%" />
+  <img src="https://github.com/Denis793/applayer/blob/main/src/img/screens/Screenshot-1-Applayer_Medical.png" alt="App Screenshot" width="100%" />
 </div>
 
 ---
