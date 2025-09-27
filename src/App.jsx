@@ -1,6 +1,6 @@
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { AboutSection } from './components/AboutSection';
@@ -14,6 +14,8 @@ import { ScrollToTopButton } from '@/components/ScrollToTopButton/';
 import { Footer } from './components/Footer';
 
 function App() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   useEffect(() => {
     AOS.init({
       duration: 800,
@@ -24,7 +26,7 @@ function App() {
 
   return (
     <main>
-      <Header />
+      <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <Hero />
       <AboutSection />
       <ClientLogoSection />
@@ -34,7 +36,7 @@ function App() {
       <DepartmentsSection />
       <TestimonialSection />
       <Footer />
-      <ScrollToTopButton />
+      <ScrollToTopButton menuOpen={menuOpen} />
     </main>
   );
 }

@@ -2,23 +2,19 @@ import { useEffect, useState } from 'react';
 import { FaArrowUp } from 'react-icons/fa';
 import styles from './ScrollToTopButton.module.scss';
 
-export function ScrollToTopButton() {
+export function ScrollToTopButton({ menuOpen }) {
   const [visible, setVisible] = useState(false);
 
-  const handleScroll = () => {
-    setVisible(window.scrollY > 300);
-  };
+  const handleScroll = () => setVisible(window.scrollY > 300);
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+  const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  if (!visible) return null;
+  if (!visible || menuOpen) return null;
 
   return (
     <button onClick={scrollToTop} className={styles.scrollToTop}>

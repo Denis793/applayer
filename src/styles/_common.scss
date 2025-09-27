@@ -17,6 +17,7 @@ a {
   color: $text-color-heading;
   text-decoration: none;
   transition: $transition-base;
+  cursor: pointer;
 
   &:hover {
     color: $primary-color;
