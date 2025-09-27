@@ -1,6 +1,6 @@
-import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { AboutSection } from './components/AboutSection';
@@ -10,6 +10,7 @@ import { FAQSection } from './components/FAQSection';
 import { StepsSection } from './components/StepsSection';
 import { DepartmentsSection } from './components/DepartmentsSection';
 import { TestimonialSection } from './components/TestimonialSection';
+import { ScrollToTopButton } from '@/components/ScrollToTopButton/';
 import { Footer } from './components/Footer';
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
       <DepartmentsSection />
       <TestimonialSection />
       <Footer />
+      <ScrollToTopButton />
     </main>
   );
 }
